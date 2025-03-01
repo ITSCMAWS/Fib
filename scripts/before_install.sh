@@ -10,3 +10,6 @@ set -e
 # Ensure the deployment directory exists
 mkdir -p /home/ubuntu/fibonacci
 rm -rf /home/ubuntu/fibonacci/*
+# Add these lines to the end of before_install.sh
+echo "before_install.sh completed successfully" > /tmp/codedeploy_debug.log
+exit 0
