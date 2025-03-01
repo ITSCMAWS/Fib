@@ -8,11 +8,7 @@ permissions:
     owner: ubuntu
     group: ubuntu
     mode: 755
-  - object: /home/ubuntu/fibonacci/scripts/before_install.sh
-    owner: ubuntu
-    group: ubuntu
-    mode: 755
-  - object: /home/ubuntu/fibonacci/scripts/start.sh
+  - object: /home/ubuntu/fibonacci/scripts
     owner: ubuntu
     group: ubuntu
     mode: 755
@@ -23,5 +19,5 @@ hooks:
       runas: ubuntu
   ApplicationStart:
     - location: scripts/start.sh
-      timeout: 299
+      timeout: 300
       runas: ubuntu

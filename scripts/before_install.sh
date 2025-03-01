@@ -7,6 +7,10 @@ if [ -f /home/ubuntu/fibonacci/pidfile ]; then
     rm -f /home/ubuntu/fibonacci/pidfile
 fi
 
-# Clean the directory
+# Clean the directory completely
 rm -rf /home/ubuntu/fibonacci
 mkdir -p /home/ubuntu/fibonacci
+
+# Make scripts executable
+mkdir -p /home/ubuntu/fibonacci/scripts
+chmod +x /home/ubuntu/fibonacci/scripts/*.sh 2>/dev/null || true
