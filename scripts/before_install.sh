@@ -7,10 +7,10 @@ if [ -f /home/ubuntu/fibonacci/pidfile ]; then
     rm -f /home/ubuntu/fibonacci/pidfile
 fi
 
-# Clean the directory completely
+# Delete and recreate the target directory
 rm -rf /home/ubuntu/fibonacci
 mkdir -p /home/ubuntu/fibonacci
 
-# Make scripts executable
-mkdir -p /home/ubuntu/fibonacci/scripts
-chmod +x /home/ubuntu/fibonacci/scripts/*.sh 2>/dev/null || true
+# After the deployment happens, make the scripts executable
+chmod -R 755 /home/ubuntu/fibonacci
+chmod +x /home/ubuntu/fibonacci/scripts/*.sh || true
