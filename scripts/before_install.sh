@@ -11,6 +11,4 @@ fi
 rm -rf /home/ubuntu/fibonacci
 mkdir -p /home/ubuntu/fibonacci
 
-# After the deployment happens, make the scripts executable
-chmod -R 755 /home/ubuntu/fibonacci
-chmod +x /home/ubuntu/fibonacci/scripts/*.sh || true
+# Don't set permissions here - AppSpec.yml will handle this

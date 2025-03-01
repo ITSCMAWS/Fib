@@ -3,6 +3,17 @@ os: linux
 files:
   - source: /
     destination: /home/ubuntu/fibonacci
+    permissions:
+      - object: /home/ubuntu/fibonacci
+        pattern: "**"
+        owner: ubuntu
+        group: ubuntu
+        mode: 755
+      - object: /home/ubuntu/fibonacci/scripts
+        pattern: "*.sh"
+        owner: ubuntu
+        group: ubuntu
+        mode: 755
 hooks:
   BeforeInstall:
     - location: scripts/before_install.sh
