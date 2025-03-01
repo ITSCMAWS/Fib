@@ -1,10 +1,19 @@
 version: 0.0
 os: linux
 files:
-- source: /
-destination: /home/ubuntu/fibonacci
+  - source: /
+    destination: /home/ubuntu/app
+permissions:
+  - object: /home/ubuntu/app
+    owner: ubuntu
+    group: ubuntu
+    mode: 755
 hooks:
-ApplicationStart:
-- location: scripts/start.sh
-timeout: 30
-runas: ubuntu
+  BeforeInstall:
+    - location: scripts/before_install.sh
+      timeout: 300
+      runas: ubuntu
+  ApplicationStart:
+    - location: scripts/start_application.sh
+      timeout: 300
+      runas: ubuntu
