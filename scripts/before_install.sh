@@ -14,3 +14,5 @@ rm -rf /home/ubuntu/fibonacci/{*,.*}
 # Or alternatively, just remove and recreate the directory:
 # rm -rf /home/ubuntu/fibonacci
 # mkdir -p /home/ubuntu/fibonacci
+# Add this at the end of your before_install.sh
+chmod +x /home/ubuntu/fibonacci/scripts/start.sh
