@@ -7,8 +7,8 @@ if [ -f /home/ubuntu/fibonacci/pidfile ]; then
     rm -f /home/ubuntu/fibonacci/pidfile
 fi
 
-# Delete and recreate the target directory
-rm -rf /home/ubuntu/fibonacci
+# Ensure the deployment directory exists
 mkdir -p /home/ubuntu/fibonacci
 
-# Don't set permissions here - AppSpec.yml will handle this
+# Use sudo to forcefully remove contents if permission denied
+sudo rm -rf /home/ubuntu/fibonacci/* || true
