@@ -7,11 +7,11 @@ permissions:
   - object: /home/ubuntu/fibonacci
     owner: ubuntu
     group: ubuntu
-    mode: 755
+    mode: 777
   - object: /home/ubuntu/fibonacci/scripts
     owner: ubuntu
     group: ubuntu
-    mode: 755
+    mode: 777
 hooks:
   BeforeInstall:
     - location: scripts/before_install.sh
