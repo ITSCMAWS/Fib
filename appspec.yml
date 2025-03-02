@@ -7,11 +7,16 @@ permissions:
   - object: /home/ubuntu/fibonacci
     owner: ubuntu
     group: ubuntu
-    mode: 777
+    mode: 755
   - object: /home/ubuntu/fibonacci/scripts
     owner: ubuntu
     group: ubuntu
-    mode: 777
+    mode: 755
+  # Remove this conflicting entry:
+  # - object: /home/ubuntu/fibonacci/scripts/*
+  #   owner: ubuntu
+  #   group: ubuntu
+  #   mode: 755
 hooks:
   BeforeInstall:
     - location: scripts/before_install.sh
