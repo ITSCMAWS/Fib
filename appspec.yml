@@ -10,10 +10,10 @@ permissions:
     mode: 755
 hooks:
   BeforeInstall:
-    - location: /bin/bash scripts/before_install.sh
+    - location: /bin/bash -c "chmod +x /home/ubuntu/fibonacci/scripts/*.sh && /bin/bash /home/ubuntu/fibonacci/scripts/before_install.sh"
       timeout: 300
       runas: ubuntu
   ApplicationStart:
-    - location: /bin/bash scripts/start.sh
+    - location: /bin/bash -c "/bin/bash /home/ubuntu/fibonacci/scripts/start.sh"
       timeout: 300
       runas: ubuntu
