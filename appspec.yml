@@ -4,7 +4,7 @@ files:
   - source: /
     destination: /home/ubuntu/fibonacci
 hooks:
-  BeforeInstall:
-    - location: scripts/before_install.sh
+  ApplicationStart:
+    - location: scripts/start.sh
       timeout: 300
       runas: ubuntu
