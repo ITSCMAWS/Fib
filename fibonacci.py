@@ -12,7 +12,7 @@ def calculate_fibonacci(n):
 	return fib
 		
 def main():
-	n = 15  # Calculate first 10 Fibonacci numbers
+	n = 12  # Calculate first 10 Fibonacci numbers
 	result = calculate_fibonacci(n)
 	print(f"First {n} Fibonacci numbers: {result}")
 		
