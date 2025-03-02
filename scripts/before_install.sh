@@ -7,8 +7,11 @@ if [ -f /home/ubuntu/fibonacci/pidfile ]; then
     rm -f /home/ubuntu/fibonacci/pidfile
 fi
 
-# Ensure the deployment directory exists
+# Delete and recreate the target directory
+rm -rf /home/ubuntu/fibonacci
 mkdir -p /home/ubuntu/fibonacci
+mkdir -p /home/ubuntu/fibonacci/scripts
 
-# Use sudo to forcefully remove contents if permission denied
-sudo rm -rf /home/ubuntu/fibonacci/* || true
+# Output debugging info
+echo "Current directory: $(pwd)"
+echo "Directory listing: $(ls -la)"
